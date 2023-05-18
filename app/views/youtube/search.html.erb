@@ -1,0 +1,13 @@
+Total results for <%= params[:query] %>: <%= @search_results[:total_results] %>
+<% if @search_results[:prev_page_token] %><%= link_to 'Back', search_path(query: params[:query], page_token: @search_results[:prev_page_token]) %><% end %>
+<%= link_to 'Home', root_path %>
+<% if @search_results[:next_page_token] %><%= link_to 'Next', search_path(query: params[:query], page_token: @search_results[:next_page_token]) %> <% end %>
+<% @search_results[:list].each do |channel| %>
+  <p><b>View count:</b> <%= channel[:view_count] %></p>
+  <p><b>Title:</b> <%= channel[:title] %></p>
+  <p><b>Description:</b> <%= channel[:description] %></p>
+  <p><b>Subscriber count:</b> <%= channel[:subscriber_count] %></p>
+  <p><b>Video count:</b> <%= channel[:video_count] %></p>
+  <p><b>Emails:</b> <%= channel[:emails] %></p>
+  <hr>
+<% end %>
