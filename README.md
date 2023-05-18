@@ -8,5 +8,5 @@ Also, you need to add an API KEY in ENV["GOOGLE_API_KEY"] and start rails.
 For example:
 
 ```shell
-ENV["GOOGLE_API_KEY"]="KEY HERE" bin/rails s
+ "GOOGLE_API_KEY"="KEY HERE" bin/rails s
 ```
