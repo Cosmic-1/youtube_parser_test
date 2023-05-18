@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You should generate API key over here. 
+https://console.cloud.google.com/apis/credentials
 
-Things you may want to cover:
+Also, you need to add an API KEY in ENV["GOOGLE_API_KEY"] and start rails. 
 
-* Ruby version
+For example:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+ENV["GOOGLE_API_KEY"]="KEY HERE" bin/rails s
+```
